@@ -21,12 +21,13 @@
        </ul>
        </nav>
        <div class="header-text">
-        <p><h1>Full Stack Developer</h1></p>
+        <p><h4>Full Stack Developer</h4></p>
         <br>
-        <h4>Hi, I'm Kajal Rajodiya From Maharashtra</h4>
+        <h3>Hi, I'm <span>Kajal</span><br>Rajodiya From Maharashtra</h3>
         </div>
         </div>
         </div>
+        <!-- ............ABOUT.............. -->
         <div id="about">
       <div class="container">
            <div class="row">
@@ -34,10 +35,79 @@
                 <img src="images/user.png">
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    I have a Bachelor's degree in Computer Science Engineering and have recently completed an advanced computing course from CDAC.
+                     With a strong foundation in both theoretical and practical aspects of computer science, 
+                     I am eager to apply my skills and knowledge to real-world software development challenges.
+                </p>
+               <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                <p class="tab-links " onclick="opentab('education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span><h3>Java </h3></span>Strong in Java application development.</li>
+                    <li><span><h3>Spring Boot</h3></span>Efficiently develops Spring Boot applications.</li>
+                    <li><span><h3>MySQL</h3></span>Manages databases and executes SQL queries.</li>
+                    <li><span><h3>React.js</h3></span>Builds dynamic and responsive web apps.</li>
+                    <li><span><h3>C</h3></span>Proficient in C programming.</li>
+                    <li><span><h3>C++</h3></span>Experienced with C++ for various applications.</li>
+                </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li style="text-align: center;"><h3 style="color: #b54769;">Java Intern</h3>
+                       <p>Codesoft, Kolkata    02/2024 - 04/2024</p>
+                       <p><strong>Role: </strong>E-commerce Website Development</p><br>
+                       <p><strong>Description:</strong> Contributed to the development of an e-commerce website enabling users to browse,
+                          select, and purchase products online. Implemented features for users to add items to a shopping cart and proceed.</p>
+                    </li>
+                    </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>Diploma In Advanced Computing (CDAC) - 2023</span><br>
+                                InstituteOf Emerging Technologies , Pune
+                            </li>
+                            <li>
+                                <span>Bachelor Of Engineering(CSE) - 2018-2022</span><br>
+                                Prof Ram Meghe College Of Engineering & Management , Amravati
+                            </li>
+                            <li>
+                                <span>Higher Secondary School (12th) - 2017-2018</span><br>
+                                Yashwantrao Chavan College Of Art And Science, Mangrulpir
+                            </li>
+                            <li>
+                                <span>Secondary School (10th) - 2015-2016</span><br>
+                                Z.P High School , Mangrulpir
+                            </li>
+                          </ul>
+                        </div>
             </div>
             </div>
             </div>
         </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+        
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                document.getElementById(tabname).classList.add("active-tab");
+                document.querySelector(".active-link").classList.remove("active-link");
+                event.currentTarget.classList.add("active-link");
+            }
+        </script>
+
 </body>
 </html>
